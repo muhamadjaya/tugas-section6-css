@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-image: url(../img/sample-pattern.png);
+}
+
+nav {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  background: white;
+}
+
+nav .wrapper {
+  position: relative;
+  padding: 0px 15px;
+  height: 70px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wrapper .logo img {
+  /* padding-top: 0.6rem; */
+  height: auto;
+  width: 45%;
+  margin-bottom: -0.4rem;
+}
+
+.wrapper .nav-links {
+  display: inline-flex;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links li a {
+  color: rgb(72, 61, 218);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 300;
+  padding-right: 19px;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+  font-weight: 700;
+  color: rgb(28, 20, 139);
+}
+
+.wrapper .btn {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+.wrapper .btn .close-btn {
+  position: absolute;
+}
+
+.fa-times {
+  color: white;
+  float: right;
+  padding-right: 30px;
+}
+
+@media screen and (max-width: 970px) {
+  .wrapper .btn {
+    display: block;
+  }
+
+  .wrapper .nav-links {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 350px;
+    top: 0;
+    left: -100%;
+    background: #5f6368;
+    display: block;
+    padding: 50px 10px;
+    line-height: 50px;
+    overflow-y: auto;
+    box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.18);
+    transition: all 0.3s ease;
+  }
+
+  #menu-btn:checked ~ .nav-links {
+    left: 0%;
+  }
+
+  #menu-btn:checked ~ .btn .menu-btn {
+    display: none;
+  }
+
+  #close-btn:checked ~ .btn .menu-btn {
+    display: block;
+  }
+
+  .nav-links li {
+    margin: 15px 10px;
+  }
+
+  .nav-links li a {
+    padding: 0 20px;
+    display: block;
+    font-size: 20px;
+    color: white;
+  }
+}
+
+nav input {
+  display: none;
+}
+
+.content {
+  padding-top: 110px;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.content h1 {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.card {
+  background-color: white;
+  margin-bottom: 5px;
+}
+
+.card-body {
+  padding: 40px 30px;
+}
+
+.card-body a {
+  text-decoration: none;
+  color: rgb(0, 110, 255);
+}
+
+.card-body a:hover {
+  text-decoration: underline;
+  color: rgb(16, 81, 165);
+}
+
+footer {
+  margin-top: 80px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
